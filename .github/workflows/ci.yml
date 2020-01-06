@@ -17,4 +17,3 @@ jobs:
         BASE_BRANCH: develop
         BRANCH: master
         FOLDER: public
-        BUILD_SCRIPT: npm run build
