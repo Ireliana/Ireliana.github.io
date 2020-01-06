@@ -17,7 +17,6 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: master
-        FOLDER: public
-        BASE_BRANCH: develop
+        FOLDER: ./public
       env:
         BUILD_SCRIPT: npm install && npm run build
