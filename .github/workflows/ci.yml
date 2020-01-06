@@ -1,0 +1,19 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@develop
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: 35e620bd70ac24c46da9d526d137f60355477f4d
+        BRANCH: master
+        FOLDER: build
+        BUILD_SCRIPT: npm install && npm run build
