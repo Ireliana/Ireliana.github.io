@@ -32,7 +32,7 @@ const Bio = () => {
 		}
 	`);
 
-    const { author, github } = data.site.siteMetadata;
+	const { author } = data.site.siteMetadata;
 	return (
 		<div
 			style={{
@@ -54,7 +54,9 @@ const Bio = () => {
 				}}
 			/>
 			<p>
-				233333
+				The wind will not stop
+				<br />
+				分享编程、阅读，生活感悟和有趣的事～
 			</p>
 		</div>
 	);
