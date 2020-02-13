@@ -1,5 +1,5 @@
 ---
-title: "github action"
+title: "Github Pages自动部署"
 date: "2020-01-06"
 description: ""
 ---

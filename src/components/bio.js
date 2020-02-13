@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import Image from "gatsby-image";
 
 import { rhythm } from "../utils/typography";
@@ -23,6 +23,7 @@ const Bio = () => {
 			}
 			site {
 				siteMetadata {
+                    title
 					author
 					social {
 						github
@@ -32,7 +33,7 @@ const Bio = () => {
 		}
 	`);
 
-	const { author } = data.site.siteMetadata;
+    const { author, title } = data.site.siteMetadata;
 	return (
 		<div
 			style={{
@@ -40,19 +41,28 @@ const Bio = () => {
 				marginBottom: rhythm(2.5)
 			}}
 		>
-			<Image
-				fixed={data.avatar.childImageSharp.fixed}
-				alt={author}
+			<Link
 				style={{
-					marginRight: rhythm(1 / 2),
-					marginBottom: 0,
-					minWidth: 50,
-					borderRadius: `100%`
+					boxShadow: `none`,
+					textDecoration: `none`
 				}}
-				imgStyle={{
-					borderRadius: `50%`
-				}}
-			/>
+				to={`/`}
+			>
+				<Image
+					fixed={data.avatar.childImageSharp.fixed}
+					alt={author}
+					title={title}
+					style={{
+						marginRight: rhythm(1 / 2),
+						marginBottom: 0,
+						minWidth: 50,
+						borderRadius: `100%`
+					}}
+					imgStyle={{
+						borderRadius: `50%`
+					}}
+				/>
+			</Link>
 			<p>
 				The wind will not stop
 				<br />
