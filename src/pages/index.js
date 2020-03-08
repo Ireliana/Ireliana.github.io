@@ -13,11 +13,10 @@ class BlogIndex extends React.Component {
 		const { data } = this.props;
 		const siteTitle = data.site.siteMetadata.title;
 		const posts = data.allMarkdownRemark.edges;
-		const isRootPath =
-			this.props.location.pathname === `${__PATH_PREFIX__}/`;
+		// const isRootPath = this.props.location.pathname === `${__PATH_PREFIX__}/`;
 		return (
-			<Layout isRootPath={isRootPath} title={siteTitle}>
-				<SEO isRootPath={isRootPath} title={siteTitle} />
+			<Layout isRootPath title={siteTitle}>
+				<SEO isRootPath title={siteTitle} />
 				<Bio />
 				{posts.map(({ node }) => {
 					const title = node.frontmatter.title || node.fields.slug;

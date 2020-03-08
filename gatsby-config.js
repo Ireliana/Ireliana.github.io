@@ -50,7 +50,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
-				//trackingId: `ADD YOUR TRACKING ID HERE`,
+				trackingId: `UA-160036140-1`
 			}
 		},
 		`gatsby-plugin-feed`,
@@ -63,7 +63,7 @@ module.exports = {
 				background_color: `#ffffff`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `content/assets/favicon.png`,
+				icon: `content/assets/favicon.png`
 			}
 		},
 		`gatsby-plugin-react-helmet`,
@@ -75,7 +75,7 @@ module.exports = {
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
-        // `gatsby-plugin-offline`,
-        `gatsby-plugin-less`
+		// `gatsby-plugin-offline`,
+		`gatsby-plugin-less`
 	]
 };

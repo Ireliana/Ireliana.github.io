@@ -5,7 +5,7 @@ import { rhythm, scale } from "../utils/typography";
 
 class Layout extends React.Component {
 	render() {
-		const { isRootPath, title, children } = this.props;
+		const { isRootPath = false, title, children } = this.props;
 		const header = isRootPath ? (
 			<h1
 				style={{
